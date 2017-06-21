@@ -38,7 +38,7 @@ var flipCard = function() {
 	console.log(cards[cardId].cardImage);
   console.log(cards[cardId].suit);
   cardsInPlay.push(cards[cardId].rank);
-  this.setAttribute(console.log(card[cardId].cardImage));
+  this.setAttribute('src',cards[cardId].cardImage);
   if (cardsInPlay.length === 2);
 };	
 var createBoard = function(){
@@ -46,7 +46,7 @@ var createBoard = function(){
     var cardElement = document.createElement('img');
     cardElement.setAttribute('src',"images/back.png");
     cardElement.setAttribute('data-id',i);
-    document.getElementbyId('game-board')[0].appendChild(cardElement);  
+    document.getElementById('game-board').appendChild(cardElement);  
     cardElement.addEventListener('click',flipCard);
   }
 };
